@@ -1,0 +1,218 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\Loreanny\\Desktop\\C1-2025\\Prog III\\PracticaDatos\\jugadores.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Nombre",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Pocisi�n",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Juegos",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Hits",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Carreras",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "HomeRuns",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "PromedioBateo",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.0,
+        "RuntimeInSeconds": 2.258,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "Juegos",
+              "Hits",
+              "Carreras",
+              "HomeRuns"
+            ],
+            "InputColumnNames": [
+              "Juegos",
+              "Hits",
+              "Carreras",
+              "HomeRuns"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "Nombre",
+            "OutputColumnName": "Nombre"
+          },
+          "e2": {
+            "InputColumnName": "Pocisi�n",
+            "OutputColumnName": "Pocisi�n"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "Juegos",
+              "Hits",
+              "Carreras",
+              "HomeRuns",
+              "Nombre",
+              "Pocisi�n"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "PromedioBateo",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": -40084.389387030344,
+        "RuntimeInSeconds": 0.825,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e6",
+          "e0": {
+            "OutputColumnNames": [
+              "Juegos",
+              "Hits",
+              "Carreras",
+              "HomeRuns"
+            ],
+            "InputColumnNames": [
+              "Juegos",
+              "Hits",
+              "Carreras",
+              "HomeRuns"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "Nombre",
+            "OutputColumnName": "Nombre"
+          },
+          "e2": {
+            "InputColumnName": "Pocisi�n",
+            "OutputColumnName": "Pocisi�n"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "Juegos",
+              "Hits",
+              "Carreras",
+              "HomeRuns",
+              "Nombre",
+              "Pocisi�n"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e6": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "PromedioBateo",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "FeaturizeText",
+      "e2": "FeaturizeText",
+      "e3": "Concatenate",
+      "e4": "FastTreeRegression",
+      "e5": "FastForestRegression",
+      "e6": "LightGbmRegression",
+      "e7": "LbfgsPoissonRegressionRegression",
+      "e8": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * (e4 + e5 + e6 + e7 + e8)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\Loreanny\\Desktop\\C1-2025\\Prog III\\PracticaDatos\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 60,
+    "LabelColumn": "PromedioBateo",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

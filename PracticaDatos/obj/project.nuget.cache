@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "VOmxqC4t+Mo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Loreanny\\Desktop\\C1-2025\\Prog III\\PracticaDatos\\PracticaDatos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Loreanny\\.nuget\\packages\\dynamicobj\\2.0.0\\dynamicobj.2.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\fsharp.core\\6.0.5\\fsharp.core.6.0.5.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\microsoft.ml\\4.0.0\\microsoft.ml.4.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\microsoft.ml.cpumath\\4.0.0\\microsoft.ml.cpumath.4.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\microsoft.ml.dataview\\4.0.0\\microsoft.ml.dataview.4.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\microsoft.ml.fasttree\\4.0.0\\microsoft.ml.fasttree.4.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\plotly.net\\3.0.1\\plotly.net.3.0.1.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\system.memory\\4.6.0\\system.memory.4.6.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\system.numerics.tensors\\8.0.0\\system.numerics.tensors.8.0.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "C:\\Users\\Loreanny\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
